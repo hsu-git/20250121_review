@@ -53,6 +53,9 @@
       #content-sizing {
         box-sizing: content-box;
       }
+      .float {
+        float: left;
+      }
     </style>
   </head>
   <body>
@@ -66,6 +69,34 @@
     <div>
       <div class="box" id="box-sizing"></div>
       <div class="box" id="content-sizing"></div>
+    </div>
+    <!-- [alt]+[shift]+[↓] -->
+    <!-- block 요소들끼리의 float 로직 -->
+    <!-- 한 줄을 다 차지하는 block 요소는 바닥에 깔린다 -->
+    <div>
+      <div class="box float" id="box-sizing"></div>
+      <div class="box float" id="content-sizing"></div>
+      <!-- 긴 글 만드는 법 : lorem*20(* 뒤 숫자 : 그 숫자에 해당하는 글자만큼 채워줌) -->
+      <!-- inline, 텍스트 -> 감싸기 -->
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione
+      perferendis eum tenetur tempora eligendi quidem saepe consequuntur nulla
+      voluptate distinctio? Perspiciatis laudantium quod animi reiciendis, aut
+      blanditiis inventore dignissimos voluptatibus! Praesentium hic vitae quasi
+      illum amet est nesciunt voluptatibus et ducimus, dolor eos. Optio,
+      praesentium? Quasi dolor porro aliquid ducimus! Voluptates, deserunt.
+      Velit repellat pariatur, tempore quae illum necessitatibus excepturi?
+      Dolorum id doloribus, beatae dolore sed nobis quam! Nulla repellendus
+      similique reiciendis in impedit provident atque libero sunt sint earum, ea
+      a ipsa rem totam vero amet eum ut facere? Repellendus, minima fuga
+      voluptate vel repudiandae explicabo fugiat officiis sequi animi ipsam
+      suscipit facilis voluptates eaque aspernatur impedit perspiciatis nam
+      optio adipisci, molestiae rem deleniti eius! Repellendus sunt animi cum!
+      Impedit expedita veritatis ab inventore totam placeat nihil quas similique
+      in laudantium distinctio quibusdam, esse officiis! Neque quo hic incidunt.
+      Beatae eius illum repellendus eaque, expedita ea asperiores veniam
+      suscipit.
+      <div class="box float" id="box-sizing"></div>
+      <div style="clear: both" class="box" id="box-sizing"></div>
     </div>
   </body>
 </html>
